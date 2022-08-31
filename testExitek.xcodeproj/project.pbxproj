@@ -13,6 +13,8 @@
 		89D44C9328BF6A1E005A2601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D44C9128BF6A1E005A2601 /* Main.storyboard */; };
 		89D44C9528BF6A21005A2601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D44C9428BF6A21005A2601 /* Assets.xcassets */; };
 		89D44C9828BF6A21005A2601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D44C9628BF6A21005A2601 /* LaunchScreen.storyboard */; };
+		89D44CA128BF7162005A2601 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D44CA028BF7162005A2601 /* Movie.swift */; };
+		89D44CA328BF7501005A2601 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D44CA228BF7501005A2601 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		89D44C9428BF6A21005A2601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89D44C9728BF6A21005A2601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89D44C9928BF6A21005A2601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89D44CA028BF7162005A2601 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		89D44CA228BF7501005A2601 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		89D44C8A28BF6A1E005A2601 /* testExitek */ = {
 			isa = PBXGroup;
 			children = (
+				89D44C9F28BF714F005A2601 /* Model */,
 				89D44C8B28BF6A1E005A2601 /* AppDelegate.swift */,
 				89D44C8D28BF6A1E005A2601 /* SceneDelegate.swift */,
 				89D44C8F28BF6A1E005A2601 /* ViewController.swift */,
@@ -63,8 +68,17 @@
 				89D44C9428BF6A21005A2601 /* Assets.xcassets */,
 				89D44C9628BF6A21005A2601 /* LaunchScreen.storyboard */,
 				89D44C9928BF6A21005A2601 /* Info.plist */,
+				89D44CA228BF7501005A2601 /* MovieCell.swift */,
 			);
 			path = testExitek;
+			sourceTree = "<group>";
+		};
+		89D44C9F28BF714F005A2601 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89D44CA028BF7162005A2601 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			files = (
 				89D44C9028BF6A1E005A2601 /* ViewController.swift in Sources */,
 				89D44C8C28BF6A1E005A2601 /* AppDelegate.swift in Sources */,
+				89D44CA128BF7162005A2601 /* Movie.swift in Sources */,
+				89D44CA328BF7501005A2601 /* MovieCell.swift in Sources */,
 				89D44C8E28BF6A1E005A2601 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
