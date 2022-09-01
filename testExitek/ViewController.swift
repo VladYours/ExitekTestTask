@@ -42,18 +42,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         inputColor(inputField: inputTitle)
         inputColor(inputField: inputYear)
         
+        //make new element
+        let newMovie = Movie(title: title, year: year)
         //check duplicate
-        if isTitleExist(title: title) {
+        if isTitleExist(newItem: newMovie) {
             //make red border when duplicate
             inputColor(inputField: inputTitle, color: "red")
         } else {
-            let newMovie = Movie(title: title, year: year)
-            listItems.append(newMovie)
-            //clean input fields
-            inputTitle.text = ""
-            inputYear.text = ""
-            //refresh List of Movies
-            tableMovie.reloadData()
+            insertNewMovie(newMovieForInsert: newMovie)
         }
         
     }
@@ -72,12 +68,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return tableCell
     }
     
+    
     //helpers
-    func isTitleExist(title: String) -> Bool {
-        guard let t = listItems.first(where: {$0.title == title}) else {
-            return false
-        }
-        return true
+    func isTitleExist(newItem: Movie) -> Bool {
+        return listItems.contains(newItem)
     }
     
     
@@ -88,6 +82,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         default:
             inputField.layer.backgroundColor = CGColor(red: 0, green: 255, blue: 0, alpha: 1)
         }
+    }
+    
+    
+    func insertNewMovie(newMovieForInsert: Movie) {
+        listItems.append(newMovieForInsert)
+        //clean input fields
+        inputTitle.text = ""
+        inputYear.text = ""
+        //refresh List of Movies
+        tableMovie.beginUpdates()
+        let rowIndex = listItems.count-1
+        let ip: IndexPath = IndexPath(row: rowIndex, section: 0)
+        tableMovie.insertRows(at: [ip], with: .fade)
+        tableMovie.endUpdates()
     }
     
 }
