@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Collections
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var listItems: [Movie] = []
+    var listItems: OrderedSet<Movie> = []
     
     @IBOutlet weak var inputTitle: UITextField!
     @IBOutlet weak var inputYear: UITextField!
