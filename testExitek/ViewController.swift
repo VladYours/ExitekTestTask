@@ -50,9 +50,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             inputColor(inputField: inputTitle, color: "red")
         } else {
             insertNewMovie(newMovieForInsert: newMovie)
-            //clear background of fieldtext
-            inputColor(inputField: inputTitle, color: "none")
-            inputColor(inputField: inputYear, color: "none")
         }
         
     }
@@ -82,7 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         switch color {
         case "red":
             inputField.layer.backgroundColor = CGColor(red: 255, green: 0, blue: 0, alpha: 1)
-        case "none":
+        case "noneclea":
             inputField.layer.backgroundColor = CGColor(red: 255, green: 0, blue: 0, alpha: 0)
         default:
             inputField.layer.backgroundColor = CGColor(red: 0, green: 255, blue: 0, alpha: 1)
@@ -101,6 +98,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let ip: IndexPath = IndexPath(row: rowIndex, section: 0)
         tableMovie.insertRows(at: [ip], with: .fade)
         tableMovie.endUpdates()
+        //clear background of fieldtext
+        inputColor(inputField: inputTitle, color: "none")
+        inputColor(inputField: inputYear, color: "none")
     }
     
 }

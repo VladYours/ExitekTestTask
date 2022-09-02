@@ -7,13 +7,7 @@
 
 import Foundation
 
-struct Movie: Equatable {
+struct Movie: Hashable {
     let title: String
     let year: Int
-    
-    static func == (lhs: Movie, rhs: Movie) -> Bool {
-            return
-                lhs.title == rhs.title
-        }
-    
 }
